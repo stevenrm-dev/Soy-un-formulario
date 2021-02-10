@@ -26,7 +26,7 @@ body, * {
 }
 
 .contain {
-  max-width: 25vw;
+  max-width: 30rem;
   border-radius: 1rem;
   background-color: var(--light-turquoise);
   display: flex;
@@ -121,4 +121,24 @@ form .input-style::placeholder {
   position: absolute;
   display: flex;
   color: var(--gold);
+}
+
+@media only screen and (max-width: 560px) {
+  .contain {
+    max-width: 90vw;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .contain {
+    flex-direction: column;
+  }
+  .title-container {
+    max-width: 100%;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0;
+    border-right: none;
+    border-bottom: .8rem dashed var(--light-turquoise);
+    padding-bottom: 3rem;
+  }
 }
